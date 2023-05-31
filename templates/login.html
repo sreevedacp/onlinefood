@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: pink;
+}
+.container {
+    padding: 10px;
+    padding-right: 30%;
+  background-color: lightblue;
+}
+
+input[type=text], input[type=password], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: orange;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  padding-right: 0px 100px ;
+  width: 53%;
+  border: 2px solid #f2f2f5;
+  margin-bottom: 35px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 60px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+<form action="login" method="post">
+  {% csrf_token %}
+  <div class="container">
+  <left>  <h1> Login </h1> </left>
+  <hr align="left">
+
+<label style="width: 50%;"> Username: </label><br>
+<input type="text" name="username" placeholder="username" size="15"required style="width: 51%;" /><br>
+
+
+
+
+    <label for="psw" style="width: 50%;">Password</label><br>
+    <input type="password" placeholder="Enter Password" name="password" required style="width: 51%;"><br>
+
+
+    <button type="submit" class="registerbtn">Login</button>
+</form>
+</body>
+</html>
